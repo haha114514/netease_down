@@ -11,7 +11,7 @@ sv = Service("网易云下载")
 async def yxh(bot, ev: CQEvent):
     kw = ev.message.extract_plain_text().strip()
     arr = kw.split('/')
-    url = 'https://v1.alapi.cn/api/music/url?id=' + str(arr[0]) + '&format=json'
+    url = 'https://v.alapi.cn/api/music/url?id=' + str(arr[0]) + '&format=json'
     r = requests.get(url)
     song_info = r.json()
     url = song_info["data"]["url"]
